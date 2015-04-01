@@ -5,19 +5,35 @@ import (
 	"math"
 )
 
-func isPalindrome(n int) bool {
-	return true
+func isPalindrome(number int) bool {
+	sourceNumber, reverse := number, 0
+	for number > 0 {
+		residue := number % 10
+		reverse = reverse * 10 + residue
+		number = number / 10
+	}
+
+	return reverse == sourceNumber
 }
 
-func findLargestPalindrome(digitNum int) int {	
-	return 0
+func findLargestPalindrome(powFactor int) int {	
+	maxFactor := int(math.Pow(10, float64(powFactor)) - 1)
+	minFactor := int(math.Pow(10, float64(powFactor - 1)))
+	largestPalindrome := -1
+
+	for x := maxFactor; x >= minFactor; x-- {
+		for y := maxFactor; y >= minFactor; y-- {
+			product := x * y
+			if (isPalindrome(product) && product >= largestPalindrome) {
+				largestPalindrome = product
+			}
+		}
+	} 
+
+	return largestPalindrome
 }
+
 
 func main() {
-		
-	n := 123
-
-	fmt.Println("length", int(math.Floor(math.Log10(float64(n))) + 1))
-	
-	// fmt.Printf("The largest palindrome made from the product of two 3-digit numbers is %d.\n", findLargestPalindrome(3))
+	fmt.Printf("The largest palindrome made from the product of two 3-digit numbers is %d.\n", findLargestPalindrome(3))
 }
