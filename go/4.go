@@ -55,5 +55,5 @@ func main() {
 	reverse(123)
 	// fmts.Println(reverse(1))
 
-	// fmt.Println("The largest palindrome made from the product of two 3-digit numbers is %d.\n", findLargestPalindrome(3))
+	// fmt.Printf("The largest palindrome made from the product of two 3-digit numbers is %d.\n", findLargestPalindrome(3))
 }

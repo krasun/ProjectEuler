@@ -31,5 +31,5 @@ func main() {
 		maxFactor--
 	}
 
-	fmt.Println("The largest prime factor of the number %d is %d.\n", n, maxFactor)
+	fmt.Printf("The largest prime factor of the number %d is %d.\n", n, maxFactor)
 }

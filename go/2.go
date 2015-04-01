@@ -25,7 +25,6 @@ func main() {
 
 	sum := 0
 	for fib := range fibonacciNumbers(func(fib int) bool { return (fib % 2) == 0 }, func(fib int) bool { return fib < 4000000 }) {
-		fmt.Println(fib)
 		sum += fib
 	}
 
