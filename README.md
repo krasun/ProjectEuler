@@ -1,5 +1,5 @@
 ProjectEulerSolutions
 =====================
 
-https://projecteuler.net/profile/krasun.png
+![Project Euler](https://projecteuler.net/profile/krasun.png)
 
